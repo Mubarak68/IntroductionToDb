@@ -1,0 +1,21 @@
+﻿@model List<Blog>
+<h1>Blog List</h1>
+<table class="table">
+    <tr>
+        <td>Blog ID</td>
+        <td>Blog Name</td>
+        <td>Blog URL</td>
+    </tr>
+
+ 
+
+    @foreach (var blogs in Model)
+    {
+        <tr>
+            <td><a href="/Blog/@blogs.Id">@blogs.Id</a></td>
+            <td>@blogs.Name</td>
+            <td><a href="@blogs.Url" target="_blank">Google Maps</a></td>        
+        </tr>
+    }
+
+</table>
